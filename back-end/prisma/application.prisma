@@ -1,0 +1,15 @@
+model Application {
+  id String @id @default(cuid())
+
+  username String @unique
+  avatar   String
+  title    String
+  text     String
+
+  comments Comment[]
+
+  CreatedAt DateTime @default(now()) @map("created_at")
+  UpdatedAt DateTime @updatedAt() @map("updated_at")
+
+  @@map("application")
+}
