@@ -1,0 +1,17 @@
+{
+	"name": "anime-application",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"front": "npm run dev --prefix front-end",
+		"back": "npm run start:dev --prefix back-end",
+		"full": "concurrently \"npm run front\" \"npm run back\""
+	},
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"concurrently": "^9.1.2"
+	}
+}

@@ -9,7 +9,6 @@ export class ApplicationService {
   constructor(private readonly prisma: PrismaService) {}
 
   async create(dto: CreateApplicationDto): Promise<Application> {
-    console.log('DTO in service:', dto);
     return await this.prisma.application.create({
       include: {
         comments: true,
