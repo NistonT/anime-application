@@ -1,3 +1,3 @@
 export const ApplicationPostElement = () => {
-	return <>POST</>;
+	return <>POST AAA</>;
 };
