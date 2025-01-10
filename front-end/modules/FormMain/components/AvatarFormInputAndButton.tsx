@@ -17,7 +17,10 @@ export const AvatarFormInputAndButton = ({
 		<>
 			<div className='p-2 w-1/2'>
 				<div className='relative group'>
-					<label htmlFor='avatar' className={style.form_input_wrapper_label}>
+					<label
+						htmlFor='avatar'
+						className={`${style.form_input_wrapper_label} group-hover:text-pink-500`}
+					>
 						Avatar
 					</label>
 					<div className='flex items-center'>
