@@ -1,7 +1,7 @@
 import { ApplicationPostElement } from "@/modules/ApplicationPostElement";
 
 function ApplicationPost() {
-	return <ApplicationPostElement /> "";
+	return <ApplicationPostElement />;
 }
 
 export default ApplicationPost;

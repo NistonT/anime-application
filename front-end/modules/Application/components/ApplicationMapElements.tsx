@@ -40,7 +40,7 @@ export const ApplicationMapElement = () => {
 								blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='
 							/>
 						</div>
-						<h2 className='mt-2 text-center text-fuchsia-900 text-lg font-semibold'>
+						<h2 className='mt-2 text-center text-fuchsia-900 text-lg font-semibold max-w-[100px] truncate overflow-hidden'>
 							{application.username}
 						</h2>
 						<p className='text-center text-gray-300 text-sm'>
@@ -52,7 +52,7 @@ export const ApplicationMapElement = () => {
 						</p>
 					</div>
 					<div className='md:flex-grow p-4'>
-						<h2 className='text-2xl font-bold text-white title-font mb-2 border-b border-purple-200 pb-2 flex items-center justify-between'>
+						<h2 className='text-2xl font-bold text-white title-font mb-2 border-b border-purple-200 pb-2 flex items-center justify-between '>
 							{application.title}
 							<span className='text-sm text-gray-200 font-normal pl-2'>
 								{application.comments.length}{" "}
@@ -60,7 +60,7 @@ export const ApplicationMapElement = () => {
 							</span>
 						</h2>
 
-						<p className='leading-relaxed bg-white text-black p-4 rounded-lg shadow-md text-sm'>
+						<p className='leading-relaxed bg-white text-black p-4 rounded-lg shadow-md text-sm max-w-6xl truncate overflow-hidden'>
 							{application.text}
 						</p>
 						<div className='flex justify-end mt-4'>
