@@ -1,0 +1,43 @@
+.application {
+	@apply text-gray-400 overflow-hidden;
+
+	.wrapper {
+		@apply container px-5 py-24 mx-auto;
+
+		.application_map {
+			@apply -my-8 divide-y-2 divide-gray-800 flex flex-col gap-5;
+
+			.application_element {
+				@apply py-4 p-4 flex border-t-2 border-gray-800 flex-wrap md:flex-nowrap rounded-3xl bg-gradient-to-br from-pink-400 to-purple-600 shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out;
+
+				.image_username {
+					@apply flex-shrink-0 flex flex-col items-center px-6;
+
+					.image {
+						@apply relative rounded-full overflow-hidden border-2 border-white shadow-md;
+					}
+
+					.username {
+						@apply mt-2 text-center text-fuchsia-900 text-lg font-semibold max-w-[100px] truncate overflow-hidden;
+					}
+
+					.date {
+						@apply text-center text-gray-300 text-sm;
+					}
+				}
+				.title_text {
+					@apply md:flex-grow p-4;
+					.title {
+						@apply text-2xl font-bold text-white mb-2 border-b border-purple-200 pb-2 flex items-center justify-between;
+					}
+					.text {
+						@apply leading-relaxed bg-white text-black p-4 rounded-lg shadow-md text-sm max-w-6xl truncate overflow-hidden;
+					}
+					.link {
+						@apply inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-fuchsia-500 hover:bg-fuchsia-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fuchsia-500 transition-colors duration-300;
+					}
+				}
+			}
+		}
+	}
+}
