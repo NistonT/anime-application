@@ -2,6 +2,7 @@ import { Header } from "@/modules/Header";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ReactQueryClientProvider } from "./ReactQuery";
 
 const geistSans = localFont({
 	src: "./fonts/GeistVF.woff",
@@ -29,16 +30,18 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
-				<div
-					className='relative min-h-screen bg-cover bg-center bg-no-repeat'
-					style={{ backgroundImage: `url('/bg/bg_anime.gif')` }}
-				>
-					<div className='absolute inset-0 bg-pink-500 opacity-30 blur-3xl'></div>
-					<div className='relative z-10'>
-						<Header />
-						{children}
+				<ReactQueryClientProvider>
+					<div
+						className='relative min-h-screen bg-cover bg-center bg-no-repeat fixed-bg'
+						style={{ backgroundImage: `url('/bg/bg_anime.gif')` }}
+					>
+						<div className='absolute inset-0 bg-pink-500 opacity-30 blur-3xl'></div>
+						<div className='relative z-10'>
+							<Header />
+							{children}
+						</div>
 					</div>
-				</div>
+				</ReactQueryClientProvider>
 			</body>
 		</html>
 	);
