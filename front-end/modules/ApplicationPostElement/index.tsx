@@ -5,7 +5,6 @@ import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { useEffect } from "react";
 import { getIdApplication } from "./api/api";
 import { Comments } from "./components/Comments";
 import { FormComments } from "./components/FormComments";
@@ -14,19 +13,10 @@ import style from "./post.module.scss";
 export const ApplicationPostElement = () => {
 	const param = useParams();
 
-	// const [application, setApplication] = useState<IGetIdApplication | null>(
-	// 	null
-	// );
-	// const [isLoadingState, setIdLoadingState] = useState<boolean>(true);
-
 	const { data, isLoading, isError, error } = useQuery({
 		queryKey: ["application", param.id],
 		queryFn: async () => getIdApplication(param),
 	});
-
-	useEffect(() => {
-		console.log(data);
-	}, [data]);
 
 	return (
 		<>
@@ -66,7 +56,7 @@ export const ApplicationPostElement = () => {
 					</div>
 					<div className={style.form_comments}>
 						<FormComments id={param} />
-						<Comments comments={data?.comments} />
+						<Comments comments={data?.comments} id_data={data?.id} />
 					</div>
 				</>
 			)}

@@ -18,3 +18,20 @@ export interface IComments {
 	CreatedAt: string | undefined;
 	UpdatedAt: string | undefined;
 }
+
+export interface ICommentsUpdate {
+	username: string | undefined;
+	avatar: string | undefined;
+	text: string | undefined;
+}
+
+export interface ICommentUpdateAPI {
+	id_data: string | undefined;
+	id_comment: string | undefined;
+	data: ICommentsUpdate;
+}
+
+export interface IDeleteComment {
+	id_data: string | undefined;
+	id_comment: string | undefined;
+}

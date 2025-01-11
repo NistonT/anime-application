@@ -39,7 +39,7 @@
 	@apply shadow-lg mx-auto my-8 overflow-hidden w-full container;
 
 	.comments {
-		@apply py-4 p-4 flex border-t-2 border-gray-800 flex-wrap md:flex-nowrap rounded-3xl bg-gradient-to-br from-pink-400 to-purple-600 shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out container;
+		@apply py-4 p-4 flex border-t-2 border-gray-800 flex-wrap md:flex-nowrap rounded-3xl bg-gradient-to-br from-pink-400 to-purple-600 shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out container mt-5;
 
 		.wrapper {
 			@apply flex-shrink-0 flex flex-col items-center px-6;
@@ -57,6 +57,44 @@
 			@apply md:flex-grow p-4;
 			.text {
 				@apply leading-relaxed bg-white text-black p-4 rounded-lg shadow-md text-sm max-w-6xl truncate overflow-hidden;
+			}
+		}
+		.wrapper_button {
+			@apply flex flex-col gap-5;
+
+			.delete {
+				@apply px-4 py-2 font-bold text-white bg-gradient-to-r from-red-500 to-orange-500 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300;
+			}
+
+			.update {
+				@apply px-4 py-2 font-bold text-white bg-gradient-to-r from-pink-500 to-purple-500 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300;
+			}
+		}
+	}
+
+	.modal_wrapper {
+		@apply fixed inset-0 z-50 flex items-center justify-center bg-transparent bg-opacity-50 backdrop-blur-sm;
+
+		.title {
+			@apply text-2xl font-bold mb-4 text-gray-800 text-center;
+		}
+
+		.name {
+			@apply text-xl font-semibold mb-4 text-gray-800;
+		}
+
+		.input {
+			@apply w-full p-2 rounded-md mb-4 bg-pink-100 border-2 border-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-400 transition-colors duration-300 text-black;
+		}
+		.button_s_c {
+			@apply flex justify-end gap-2;
+
+			.save {
+				@apply px-6 py-3 bg-gradient-to-br from-pink-500 to-purple-500 text-white rounded-full shadow-md hover:shadow-xl transition-shadow duration-300 font-semibold;
+			}
+
+			.cancel {
+				@apply px-6 py-3 bg-gray-300 text-gray-800 rounded-full shadow-md hover:shadow-xl transition-shadow duration-300 font-semibold;
 			}
 		}
 	}
