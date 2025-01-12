@@ -45,7 +45,7 @@ export const ApplicationMapElement = () => {
 				setSearchQuery={setSearchQuery}
 			/>
 			{filteredApplications.map((application: IApplications) => (
-				<div className={style.application_element}>
+				<div className={style.application_element} data-aos='fade-up'>
 					<ImageUsername
 						username={application.username}
 						createdAt={application.CreatedAt}
