@@ -3,12 +3,15 @@ import { IComments } from "../type/type";
 import imageUser from "@/public/icon/icon.jpg";
 import Image from "next/image";
 import style from "./../post.module.scss";
+import { DeleteCommentForm } from "./DeleteCommentForm";
+import { UpdateCommentForm } from "./UpdateCommentForm";
 
 type Props = {
 	comments: IComments | IComments[] | undefined;
+	id_data: string | undefined;
 };
 
-export const Comments = ({ comments }: Props) => {
+export const Comments = ({ comments, id_data }: Props) => {
 	return (
 		<>
 			{Array.isArray(comments) &&
@@ -41,6 +44,11 @@ export const Comments = ({ comments }: Props) => {
 						</div>
 						<div className={style.wrapper_text}>
 							<p className={style.text}>{comment?.text}</p>
+						</div>
+
+						<div className={style.wrapper_button}>
+							<DeleteCommentForm id_data={id_data} id_comment={comment.id} />
+							<UpdateCommentForm id_data={id_data} id_comment={comment.id} />
 						</div>
 					</div>
 				))}

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import style from "./../application.module.scss";
+import { DeleteButtonApplication } from "./DeleteButtonApplication";
+import { UpdateButtonApplication } from "./UpdateButtonApplication";
 
 type Props = {
 	id: string;
@@ -24,6 +26,10 @@ export const TitleTextLink = ({ id, title, text, comments }: Props) => {
 					<Link href={`/applications/${id}`} className={style.link}>
 						Перейти к посту
 					</Link>
+				</div>
+				<div className='flex gap-2'>
+					<DeleteButtonApplication id={id} />
+					<UpdateButtonApplication id_application={id} />
 				</div>
 			</div>
 		</>
