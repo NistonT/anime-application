@@ -8,3 +8,15 @@ export interface IApplications {
 	CreatedAt: string;
 	UpdatedAt: string;
 }
+
+export interface IApplicationUpdate {
+	username: string;
+	avatar: string;
+	title: string;
+	text: string;
+}
+
+export interface IApplicationUpdateApi {
+	id_application: string;
+	data: IApplicationUpdate;
+}
