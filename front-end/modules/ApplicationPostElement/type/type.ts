@@ -15,8 +15,8 @@ export interface IComments {
 	avatar: string;
 	text: string;
 	comment_id: string;
-	CreatedAt: string | undefined;
-	UpdatedAt: string | undefined;
+	CreatedAt: string | undefined | Date;
+	UpdatedAt: string | undefined | Date;
 }
 
 export interface ICommentsUpdate {

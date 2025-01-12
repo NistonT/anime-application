@@ -1,5 +1,8 @@
 "use client";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import { UseFormCreatedApplication } from "../hooks/UseFormCreatedApplication";
 import style from "./../main.module.scss";
 import { AvatarFormInputAndButton } from "./AvatarFormInputAndButton";
@@ -24,9 +27,17 @@ export const MainFormCreatedApplicationPost = () => {
 		onSubmit,
 	} = UseFormCreatedApplication();
 
+	useEffect(() => {
+		AOS.init({
+			duration: 1000,
+			once: false,
+			easing: "ease",
+		});
+	}, []);
+
 	return (
 		<>
-			<div className={style.form_wrapper}>
+			<div className={style.form_wrapper} data-aos='fade-up'>
 				<form onSubmit={handleSubmit(onSubmit)} className={style.form}>
 					<UsernameFormInput
 						register={register}

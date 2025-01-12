@@ -11,16 +11,20 @@
   "dependencies": {
     "@tanstack/react-query": "^4.36.1",
     "@tanstack/react-query-devtools": "^4.36.1",
+    "aos": "^2.3.4",
+    "framer-motion": "^11.17.0",
     "next": "14.2.20",
     "react": "^18",
     "react-dom": "^18",
     "uuid": "^11.0.5"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "axios": "^1.7.9",
+    "daisyui": "^4.12.23",
     "eslint": "^8",
     "eslint-config-next": "14.2.20",
     "postcss": "^8",

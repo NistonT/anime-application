@@ -5,13 +5,13 @@ export const MainFirstText = () => {
 		<>
 			<div className={style.first_text}>
 				<h1 className={style.title}>
-					<span className='italic'>О</span>ставить
-					<span className='ml-1'> заявку</span>
+					<span className='italic'>Leave</span> a
+					<span className='ml-1'> request</span>
 				</h1>
 				<p className={style.text}>
-					<span className='relative inline-block'>Поделитесь своим</span>
+					<span className='relative inline-block'>Share your</span>
 					<span className='relative inline-block ml-1 font-semibold'>
-						мнением
+						opinion
 					</span>
 				</p>
 			</div>

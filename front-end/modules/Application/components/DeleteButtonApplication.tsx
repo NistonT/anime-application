@@ -1,4 +1,5 @@
 import { deleteApplication } from "../api/api";
+import style from "./../application.module.scss";
 
 type Props = {
 	id: string;
@@ -15,7 +16,7 @@ export const DeleteButtonApplication = ({ id }: Props) => {
 			<button
 				onClick={handlerApplicationDelete}
 				type='button'
-				className='px-4 py-2 font-bold text-white bg-gradient-to-r from-red-500 to-orange-500 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300'
+				className={style.delete}
 			>
 				Delete
 			</button>
