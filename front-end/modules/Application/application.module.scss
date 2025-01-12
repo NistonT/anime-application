@@ -3,6 +3,19 @@
 
 	.wrapper {
 		@apply container px-5 py-24 mx-auto;
+		.filtered {
+			@apply flex mb-4 justify-between;
+			.wrapper_filter {
+				@apply flex gap-2;
+
+				.date_filter {
+					@apply p-2 rounded-xl border-2 border-pink-400 bg-pink-100 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-colors duration-300  drop-shadow-md font-['Permanent_Marker'];
+				}
+			}
+			.search_filter {
+				@apply p-2 rounded-xl border-2 border-pink-400 bg-pink-100 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-colors duration-300 drop-shadow-md font-['Permanent_Marker'];
+			}
+		}
 
 		.application_map {
 			@apply -my-8 divide-y-2 divide-gray-800 flex flex-col gap-5;
@@ -36,6 +49,12 @@
 					.link {
 						@apply inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-fuchsia-500 hover:bg-fuchsia-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fuchsia-500 transition-colors duration-300;
 					}
+				}
+				.delete {
+					@apply px-4 py-2 font-bold text-white bg-gradient-to-r from-red-500 to-orange-500 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300;
+				}
+				.update {
+					@apply px-4 py-2 font-bold text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300;
 				}
 			}
 		}

@@ -1,13 +1,24 @@
 "use client";
 import { useEffect, useState } from "react";
 import { getAllDataApplication } from "../api/api";
+import { useFilteredSearch } from "../hook/hook";
 import { IApplications } from "../type/type";
 import style from "./../application.module.scss";
+import { FilteredSearch } from "./FilteredSearch";
 import { ImageUsername } from "./ImageUsername";
 import { TitleTextLink } from "./TitleTextLink";
 
 export const ApplicationMapElement = () => {
 	const [applications, setApplications] = useState<IApplications[]>([]);
+	const {
+		startDate,
+		setStartDate,
+		endDate,
+		setEndDate,
+		searchQuery,
+		setSearchQuery,
+		filteredApplications,
+	} = useFilteredSearch(applications);
 
 	useEffect(() => {
 		const getData = async (): Promise<IApplications[] | null> => {
@@ -22,9 +33,18 @@ export const ApplicationMapElement = () => {
 		};
 		getData();
 	}, []);
+
 	return (
 		<>
-			{applications.map((application: IApplications) => (
+			<FilteredSearch
+				startDate={startDate}
+				setStartDate={setStartDate}
+				endDate={endDate}
+				setEndDate={setEndDate}
+				searchQuery={searchQuery}
+				setSearchQuery={setSearchQuery}
+			/>
+			{filteredApplications.map((application: IApplications) => (
 				<div className={style.application_element}>
 					<ImageUsername
 						username={application.username}

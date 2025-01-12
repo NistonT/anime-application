@@ -3,6 +3,7 @@ import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { updateApplication } from "../api/api";
 import { IApplicationUpdate, IApplicationUpdateApi } from "../type/type";
+import style from "./../application.module.scss";
 
 type Props = {
 	id_application: string;
@@ -33,11 +34,7 @@ export const UpdateButtonApplication = ({ id_application }: Props) => {
 
 	return (
 		<>
-			<button
-				onClick={handlerIsModal}
-				type='button'
-				className='px-4 py-2 font-bold text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300'
-			>
+			<button onClick={handlerIsModal} type='button' className={style.update}>
 				Update
 			</button>
 
