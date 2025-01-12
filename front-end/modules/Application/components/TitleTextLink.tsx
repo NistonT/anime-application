@@ -24,7 +24,7 @@ export const TitleTextLink = ({ id, title, text, comments }: Props) => {
 				<p className={style.text}>{text}</p>
 				<div className='flex justify-end mt-4'>
 					<Link href={`/applications/${id}`} className={style.link}>
-						Перейти к посту
+						Go to post
 					</Link>
 				</div>
 				<div className='flex gap-2'>

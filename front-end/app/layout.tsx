@@ -1,3 +1,4 @@
+import { Footer } from "@/modules/Footer";
 import { Header } from "@/modules/Header";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -39,6 +40,7 @@ export default function RootLayout({
 						<div className='relative z-10'>
 							<Header />
 							{children}
+							<Footer />
 						</div>
 					</div>
 				</ReactQueryClientProvider>
